@@ -1,13 +1,84 @@
 body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  max-width: 500px;
+  margin: 60px auto;
+  text-align: center;
 }
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn {
+  background: #4f46e5;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  margin: 5px;
+}
+
+.btn-outline {
+  background: white;
+  border: 1px solid #4f46e5;
+  color: #4f46e5;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.button-group {
+  margin-top: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #4f46e5;
+  padding: 12px 20px;
+  color: white;
+}
+
+.logo {
+  margin: 0;
+}
+
+.nav-links a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.logout-btn {
+  background: white;
+  color: #4f46e5;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
