@@ -1,8 +1,10 @@
 import { Link, useNavigate } from "react-router-dom";
+import { useTheme } from "../contexts/ThemeContext";
 
 function Navbar() {
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
+  const { isDark, toggleTheme } = useTheme();
 
   const handleLogout = () => {
     localStorage.removeItem("token");
@@ -24,6 +26,22 @@ function Navbar() {
         ) : (
           <>
             <Link to="/dashboard">Dashboard</Link>
+            <button
+              onClick={toggleTheme}
+              style={{
+                background: "transparent",
+                border: "2px solid var(--text-primary)",
+                color: "var(--text-primary)",
+                padding: "8px 16px",
+                borderRadius: "8px",
+                cursor: "pointer",
+                fontSize: "1.2rem",
+                transition: "all 0.3s ease",
+              }}
+              title={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
+            >
+              {isDark ? "☀️" : "🌙"}
+            </button>
             <button onClick={handleLogout} className="logout-btn">
               Logout
             </button>
